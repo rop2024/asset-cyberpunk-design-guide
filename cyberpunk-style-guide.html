@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A reusable cyberpunk interface design reference.">
+  <title>Cyberpunk — Style Guide</title>
+  <link rel="stylesheet" href="cyberpunk-style-guide.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">CYBERPUNK</div>
+      <div class="descriptor">// style_guide.v1</div>
+      <div class="nav-label">Reference map</div>
+      <a class="nav-link" href="#colors" aria-current="true">01 / Colors</a>
+      <a class="nav-link" href="#type">02 / Type</a>
+      <a class="nav-link" href="#components">03 / Components</a>
+      <a class="nav-link" href="#states">04 / States</a>
+      <a class="nav-link" href="#patterns">05 / Patterns</a>
+      <div class="status">● SYSTEM ONLINE</div>
+    </aside>
+
+    <main class="main">
+      <header class="hero">
+        <div>
+          <div class="eyebrow">// design_reference / reusable_interface_system</div>
+          <h1>Build the<br><span style="color:var(--yellow)">future</span> clearly.</h1>
+          <p class="lede">A practical visual language for dark, data-dense products. Use this reference to align product, UX, and engineering before the first screen is built.</p>
+        </div>
+        <div class="hero-note">
+          <div class="eyebrow" style="color:var(--magenta)">// system principle</div>
+          <strong>Signal over noise.</strong>
+          <p>Every neon accent has a job. Keep surfaces quiet, hierarchy sharp, and status unmistakable.</p>
+        </div>
+      </header>
+
+      <section class="section" id="colors">
+        <div class="section-heading">
+          <h2>01 / Color system</h2>
+          <p>Dark surfaces create the workspace. Accents identify intent, state, and priority.</p>
+        </div>
+        <div class="grid four">
+          <div class="panel" style="--accent:var(--cyan)"><div class="swatch" style="--swatch:var(--bg)"></div><span class="token-name">Background</span><span class="token-value">#080A0F</span></div>
+          <div class="panel" style="--accent:var(--cyan)"><div class="swatch" style="--swatch:var(--surface-2)"></div><span class="token-name">Surface 02</span><span class="token-value">#141925</span></div>
+          <div class="panel" style="--accent:var(--cyan)"><div class="swatch" style="--swatch:var(--line)"></div><span class="token-name">Structural line</span><span class="token-value">#293244</span></div>
+          <div class="panel" style="--accent:var(--text)"><div class="swatch" style="--swatch:var(--text)"></div><span class="token-name">Primary text</span><span class="token-value">#F2F5F7</span></div>
+          <div class="panel" style="--accent:var(--cyan)"><div class="swatch" style="--swatch:var(--cyan)"></div><span class="token-name">Information</span><span class="token-value">#00E5FF</span></div>
+          <div class="panel" style="--accent:var(--yellow)"><div class="swatch" style="--swatch:var(--yellow)"></div><span class="token-name">Primary action</span><span class="token-value">#FCEE09</span></div>
+          <div class="panel" style="--accent:var(--green)"><div class="swatch" style="--swatch:var(--green)"></div><span class="token-name">Success</span><span class="token-value">#5DFF6A</span></div>
+          <div class="panel" style="--accent:var(--pink)"><div class="swatch" style="--swatch:var(--pink)"></div><span class="token-name">Warning / danger</span><span class="token-value">#FF3B7A</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="type">
+        <div class="section-heading">
+          <h2>02 / Typography</h2>
+          <p>Pair a condensed display face with a technical monospace voice for a readable command-console rhythm.</p>
+        </div>
+        <div class="grid two">
+          <div class="panel" style="--accent:var(--yellow)">
+            <div class="panel-title">// display / rajdhani</div>
+            <p class="type-display">Make data<br>feel alive.</p>
+            <p class="type-body">Use for headings, navigation, values, and interface copy. Keep longer explanations in normal sentence case.</p>
+          </div>
+          <div class="panel" style="--accent:var(--cyan)">
+            <div class="panel-title">// technical / jetbrains mono</div>
+            <p class="type-mono">STATUS:: READY_ / 001</p>
+            <p class="type-body">Use for labels, filters, timestamps, code, measurements, and compact metadata. The `// label` prefix establishes the system voice.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="components">
+        <div class="section-heading">
+          <h2>03 / Components</h2>
+          <p>Reusable primitives keep new product surfaces consistent without making them feel identical.</p>
+        </div>
+        <div class="grid two">
+          <div class="panel" style="--accent:var(--yellow)">
+            <div class="panel-title">// actions / controls</div>
+            <div class="button-row">
+              <button class="button primary" type="button">Initialize</button>
+              <button class="button" type="button">Secondary</button>
+              <button class="button" type="button">Reset</button>
+            </div>
+            <div class="chip-row" style="margin-top:20px">
+              <button class="chip active" type="button">Active</button>
+              <button class="chip" type="button">Archive</button>
+              <button class="chip" type="button">Recent</button>
+            </div>
+          </div>
+          <div class="panel" style="--accent:var(--green)">
+            <div class="panel-title">// metric / progress</div>
+            <div class="grid two">
+              <div class="metric" style="--accent:var(--cyan)"><span class="value">84%</span><span class="caption">completion</span><div class="bar"><span></span></div></div>
+              <div class="metric" style="--accent:var(--magenta)"><span class="value">12.4k</span><span class="caption">throughput</span><div class="bar"><span style="width:58%"></span></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="states">
+        <div class="section-heading">
+          <h2>04 / System states</h2>
+          <p>Pair every status color with explicit language so the interface remains understandable without color perception.</p>
+        </div>
+        <div class="panel" style="--accent:var(--orange)">
+          <div class="state-list">
+            <div class="state"><span>Connection to primary node</span><strong class="online">● ONLINE</strong></div>
+            <div class="state"><span>Background indexing task</span><strong class="queued">◌ QUEUED</strong></div>
+            <div class="state"><span>Authentication token</span><strong class="alert">× EXPIRED</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="patterns">
+        <div class="section-heading">
+          <h2>05 / Layout patterns</h2>
+          <p>Start new projects from these composition rules, then adapt the content—not the visual grammar.</p>
+        </div>
+        <div class="grid two">
+          <div class="panel" style="--accent:var(--cyan)">
+            <div class="panel-title">// responsive shell</div>
+            <pre class="code-block"><span class="accent">shell</span> {
+  display: grid;
+  grid-template-columns:
+    <span class="highlight">240px 1fr</span>;
+  gap: <span class="highlight">16px</span>;
+}
+
+<span class="accent">panel</span> {
+  padding: <span class="highlight">20px</span>;
+  border-left: <span class="highlight">4px</span> solid accent;
+}</pre>
+          </div>
+          <div class="panel" style="--accent:var(--magenta)">
+            <div class="panel-title">// density / hierarchy</div>
+            <table>
+              <thead><tr><th>Layer</th><th>Rule</th></tr></thead>
+              <tbody>
+                <tr><td>Workspace</td><td>Quiet, almost-black background</td></tr>
+                <tr><td>Panel</td><td>One purpose, one accent</td></tr>
+                <tr><td>Content</td><td>Clear value before metadata</td></tr>
+                <tr><td>Action</td><td>Yellow means highest priority</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">// cyberpunk_style_guide / build with intent / v1.0</footer>
+    </main>
+  </div>
+</body>
+</html>
